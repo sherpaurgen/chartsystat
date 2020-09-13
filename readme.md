@@ -11,5 +11,5 @@ LC_TIME=C sar -A -t -f /var/log/sysstat/sa14 > /tmp/sar14
 
 2) download the /tmp/sar14
 
-bash ex.sh /path/to/sar14
+bash fire.sh /path/to/sar14
 
