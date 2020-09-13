@@ -27,21 +27,20 @@ axe[1].set(ylabel='Up KBps')
 plt.xlabel('TimeStamp')  # common x label
 
 # locating
-axe[0].xaxis.set_major_locator(dates.MinuteLocator(interval=30))
+axe[0].xaxis.set_major_locator(dates.MinuteLocator(interval=15))
 axe[0].xaxis.set_major_formatter(dates.DateFormatter('%H:%M'))
 
 
-axe[1].xaxis.set_major_locator(dates.MinuteLocator(interval=30))
+axe[1].xaxis.set_major_locator(dates.MinuteLocator(interval=15))
 axe[1].xaxis.set_major_formatter(dates.DateFormatter('%H:%M'))
 
 
 plt.xticks(rotation=45)
 plt.tight_layout()
 # fig.autofmt_xdate()
-plt.setp(axe[0].xaxis.get_majorticklabels(), rotation=90)
+plt.setp(axe[0].xaxis.get_majorticklabels(), rotation=45, fontsize=7)
 
-plt.setp(axe[1].xaxis.get_majorticklabels(), rotation=90)
+plt.setp(axe[1].xaxis.get_majorticklabels(), rotation=45, fontsize=7)
 
 
 plt.show()
-
