@@ -15,3 +15,10 @@ sed -n '/IFACE   rxpck/,/Average:/p' ${filepath} | grep eth0 | sed '$d' | tr -s 
 #loadavg
 grep -m1 "runq-sz  plist-sz   ldavg-1   ldavg-5  ldavg-15" ${filepath} | head -n1 | sed 's/[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\ /TS/g' | tr -s '[:blank:]' ',' > /tmp/loadavg.csv
 sed -n '/runq-sz/,/Average:/p' ${filepath} | sed -e '1d' | sed '$d' | sed '$d' | tr -s '[:blank:]' ',' >> /tmp/loadavg.csv
+
+# tps
+grep -m1 "tps      rtps      wtps"  ${filepath} | head -n1 |sed 's#/##g' | sed 's/[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\ /TS/g' | tr -s '[:blank:]' ',' > /tmp/iotps.csv
+sed -n '/tps      rtps      wtps/,/Average:/p'  ${filepath}  | sed -e '1d' | sed '$d' |  sed '$d' | tr -s '[:blank:]' ',' >> /tmp/iotps.csv
+
+#execute py script
+/Users/urgensherpa/graphsar/venv/bin/python3 plotter.py
