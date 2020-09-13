@@ -16,4 +16,7 @@ Linux/Unix package requiremnts:-
 3) edit fire.sh with your python path 
 4) chmod +x fire.sh
     bash fire.sh /path/to/sar14
+    
+    execution of script will generate sys_report.pdf in your script's directory.
+    you can play with sysstat file - sar13 from 48core, 125G memory system.
 
