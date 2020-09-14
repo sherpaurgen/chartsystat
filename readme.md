@@ -15,9 +15,12 @@ Linux/Unix package requiremnts:-
 2) download  /tmp/sar14 to your local storage path eg. /home/Johndoe/sar14
 
 3) git clone https://github.com/sherpaurgen/chartsystat 
+
     3.1 - edit fire.sh with your python path 
+
     3.2 - chmod +x fire.sh
+    
     3.3 - bash fire.sh /home/Johndoe/sar14
     
-execution of script will generate sys_report.pdf in your script's directory.
+Execution of fire.sh will generate sys_report.pdf in your script's directory.
 you can playaround with sysstat file inside sysstat directory
