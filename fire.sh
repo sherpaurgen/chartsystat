@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ $# -ne 1 ]; then
-    echo -e "Invalid or Empty arguments.\nSyntax: sh ex.sh /path/to/sarfile"
+    echo -e "Invalid or Empty arguments.\nSyntax: bash fire.sh /path/to/sar23"
     exit 1
 fi
 filepath=${1}

@@ -12,11 +12,12 @@ Linux/Unix package requiremnts:-
 
     LC_TIME=C sar -A -t -f /var/log/sysstat/sa14 > /tmp/sar14
 
-2) download the /tmp/sar14
-3) edit fire.sh with your python path 
-4) chmod +x fire.sh
-    bash fire.sh /path/to/sar14
-    
-    execution of script will generate sys_report.pdf in your script's directory.
-    you can play with sysstat file - sar13 from 48core, 125G memory system.
+2) download  /tmp/sar14 to your local storage path eg. /home/Johndoe/sar14
 
+3) git clone https://github.com/sherpaurgen/chartsystat 
+    3.1 - edit fire.sh with your python path 
+    3.2 - chmod +x fire.sh
+    3.3 - bash fire.sh /home/Johndoe/sar14
+    
+execution of script will generate sys_report.pdf in your script's directory.
+you can playaround with sysstat file inside sysstat directory
