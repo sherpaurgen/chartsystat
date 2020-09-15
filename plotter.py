@@ -79,7 +79,7 @@ axe[6].plot_date(dfbw.index, dfbw['txkBs'], '--', linewidth=0.5)
 # Label
 # axe[0].set_title('Down')
 # axe[1].set_title('Up')
-axe[0].set_ylabel('MB', fontsize=7)
+axe[0].set_ylabel('MegaByte', fontsize=7)
 axe[1].set_ylabel('cpu%', fontsize=7)
 axe[2].set_ylabel('Loadavg', fontsize=7)
 axe[3].set_ylabel('Blocked', fontsize=7)
