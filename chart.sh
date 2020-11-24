@@ -22,7 +22,7 @@ sed -n '/tps      rtps      wtps/,/Average:/p'  ${filepath}  | sed -e '1d' | sed
 
 #mem
 grep -m1 'kbmemfree   kbavail'  ${filepath} | head -n 1 | sed 's/[0-9]\{2\}:[0-9]\{2\}:[0-9]\{2\}\ /TS/g' | tr -s ' ' | sed 's/ /,/g' | sed 's/%//g' > /tmp/memfile.csv
-sed -n '/kbmemfree   kbavail kbmemused/,/Average:/p' sysstat_sample/sar13 | sed -e '1d'| sed '$d' | sed '$d' | tr -s '[:blank:]' ',' >> /tmp/memfile.csv
+sed -n '/kbmemfree   kbavail kbmemused/,/Average:/p' ${filepath} | sed -e '1d'| sed '$d' | sed '$d' | tr -s '[:blank:]' ',' >> /tmp/memfile.csv
 
 #execute py script ==> change your python path below 
 /path/to/python3 plotter.py
