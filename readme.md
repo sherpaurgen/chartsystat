@@ -27,5 +27,4 @@ Linux/Unix package requiremnts:-
     
 Execution of chart.sh will generate sys_report.pdf in your script's directory.
 you can playaround with sysstat file inside sysstat directory
-
-[embed]https://github.com/sherpaurgen/chartsystat/blob/master/sys_report.pdf[/embed]
+![image](https://github.com/sherpaurgen/chartsystat/blob/master/sys_report.png)
